@@ -1,0 +1,15 @@
+,value_count,value_share
+churned,24,0.6666666666666666
+n_support_tickets,13,0.3611111111111111
+purchases_last_30d,12,0.3333333333333333
+revenue_last_30d,12,0.3333333333333333
+sessions_last_30d,1,0.027777777777777776
+user_id,0,0.0
+country,0,0.0
+city,0,0.0
+device,0,0.0
+channel,0,0.0
+avg_session_duration_min,0,0.0
+pages_per_session,0,0.0
+signup_year,0,0.0
+plan,0,0.0

@@ -1,0 +1,2 @@
+,user_id,country,city,device,channel,sessions_last_30d,avg_session_duration_min,pages_per_session,purchases_last_30d,revenue_last_30d,churned,signup_year,plan,n_support_tickets
+25,1025,RU,Moscow,Tablet,Email,3,3.0,2.2,0,0.0,1,2019,Free,1
