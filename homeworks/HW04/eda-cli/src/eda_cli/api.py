@@ -3,6 +3,7 @@ from __future__ import annotations
 from time import perf_counter
 
 import pandas as pd
+import numpy as np
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from pydantic import BaseModel, Field
 
@@ -34,6 +35,18 @@ class QualityRequest(BaseModel):
         le=1.0,
         description="Максимальная доля пропусков среди всех колонок (0..1)",
     )
+    max_zeros_share: float = Field (
+        ...,
+        ge=0.0,
+        le=1.0,
+        description="Максимальная доля дубликатов строк (0..1)",
+    )
+    max_duplicates_share: float = Field (
+        ...,
+        ge=0.0,
+        le=1.0,
+        description="Максимальная доля дубликатов строк (0..1)",
+    )
     numeric_cols: int = Field(
         ...,
         ge=0,
@@ -45,6 +58,9 @@ class QualityRequest(BaseModel):
         description="Количество категориальных колонок",
     )
 
+class NumericRequest(BaseModel):
+    """Числовое значение"""
+    n: int = Field(...,description="Необходимое числовое значение")
 
 class QualityResponse(BaseModel):
     """Ответ заглушки модели качества датасета."""
@@ -77,6 +93,12 @@ class QualityResponse(BaseModel):
         description="Размеры датасета: {'n_rows': ..., 'n_cols': ...}, если известны",
     )
 
+class FlagResponse(BaseModel):
+    """Ответ: флаги датасета"""
+    flags: dict[str, bool | int | float] | None = Field(
+        default=None,
+        description="Все флаги датасета",
+    )
 
 # ---------- Системный эндпоинт ----------
 
@@ -106,8 +128,10 @@ def quality(req: QualityRequest) -> QualityResponse:
     # Базовый скор от 0 до 1
     score = 1.0
 
-    # Чем больше пропусков, тем хуже
+    # Чем больше пропусков, нулевых значений, дубликатов, тем хуже
     score -= req.max_missing_share
+    score -= req.max_zeros_share if req.max_zeros_share > 0.8 else 0
+    score -= req.max_duplicates_share
 
     # Штраф за слишком маленький датасет
     if req.n_rows < 1000:
@@ -140,6 +164,8 @@ def quality(req: QualityRequest) -> QualityResponse:
         "too_few_rows": req.n_rows < 1000,
         "too_many_columns": req.n_cols > 100,
         "too_many_missing": req.max_missing_share > 0.5,
+        "too_many_zeros": req.max_zeros_share > 0.9,
+        "too_many_duplicates": req.max_duplicates_share > 0.2,
         "no_numeric_columns": req.numeric_cols == 0,
         "no_categorical_columns": req.categorical_cols == 0,
     }
@@ -148,6 +174,8 @@ def quality(req: QualityRequest) -> QualityResponse:
     print(
         f"[quality] n_rows={req.n_rows} n_cols={req.n_cols} "
         f"max_missing_share={req.max_missing_share:.3f} "
+        f"max_zeros_share={req.max_zeros_share:.3f} "
+        f"max_duplicates_share={req.max_duplicates_share:.3f} "
         f"score={score:.3f} latency_ms={latency_ms:.1f} ms"
     )
 
@@ -198,7 +226,8 @@ async def quality_from_csv(file: UploadFile = File(...)) -> QualityResponse:
     # Используем EDA-ядро из S03
     summary = summarize_dataset(df)
     missing_df = value_table(df, None)
-    flags_all = compute_quality_flags(summary, missing_df)
+    zeros_df = value_table(df, 0)
+    flags_all = compute_quality_flags(summary, missing_df, zeros_df)
 
     # Ожидаем, что compute_quality_flags вернёт quality_score в [0,1]
     score = float(flags_all.get("quality_score", 0.0))
@@ -242,3 +271,49 @@ async def quality_from_csv(file: UploadFile = File(...)) -> QualityResponse:
         flags=flags_bool,
         dataset_shape={"n_rows": n_rows, "n_cols": n_cols},
     )
+
+# ---------- /quality-flags-from-csv: вывод флагов из CSV файла через нашу EDA-логику ----------
+
+@app.post(
+    "/quality-flags-from-csv",
+    response_model=FlagResponse,
+    tags=["quality"],
+    summary="Возврат флагов по CSV-файлу с использованием EDA-ядра",
+)
+async def quality_flags_from_csv(file: UploadFile = File(...)) -> FlagResponse:
+    """
+    Эндпоинт, который принимает CSV-файл, запускает EDA-ядро
+    (summarize_dataset + value_table + compute_quality_flags)
+    и возвращает флаги.
+    """
+
+    if file.content_type not in ("text/csv", "application/vnd.ms-excel", "application/octet-stream"):
+        # content_type от браузера может быть разным, поэтому проверка мягкая
+        # но для демонстрации оставим простую ветку 400
+        raise HTTPException(status_code=400, detail="Ожидается CSV-файл (content-type text/csv).")
+
+    try:
+        # FastAPI даёт file.file как file-like объект, который можно читать pandas'ом
+        df = pd.read_csv(file.file)
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=400, detail=f"Не удалось прочитать CSV: {exc}")
+
+    if df.empty:
+        raise HTTPException(status_code=400, detail="CSV-файл не содержит данных (пустой DataFrame).")
+    
+    # Используем EDA-ядро из S03
+    summary = summarize_dataset(df)
+    missing_df = value_table(df, None)
+    zeros_df = value_table(df, 0)
+    flags = compute_quality_flags(summary, missing_df, zeros_df)
+
+    print(
+        f"[quality-flags-from-csv] filename={file.filename!r} "
+        f"{flags}"
+    )
+    
+    return FlagResponse(
+        flags=flags
+    )
+
+# To-do: Сделать доп задание...
