@@ -1,5 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 source .venv/bin/activate
+RD=$(pwd)
 cd homeworks
 echo "HW№?"
 read HWN
@@ -7,4 +8,31 @@ if [ $HWN -lt 10 ]; then
 	HWPREFIX=0
 fi
 cd `echo "HW$HWPREFIX$HWN"`
-bash
+echo $RD
+# The human mind is too tiny to comprehend the horrors of humanity 
+cat > ${RD}/.tbash.tmp << EOL
+RD=${RD}
+alias 1="cd ${RD}/homeworks/HW01"
+alias 2="cd ${RD}/homeworks/HW02"
+alias 3="cd ${RD}/homeworks/HW03"
+alias 4="cd ${RD}/homeworks/HW04"
+alias 5="cd ${RD}/homeworks/HW05"
+alias 6="cd ${RD}/homeworks/HW06"
+alias 7="cd ${RD}/homeworks/HW07"
+alias 8="cd ${RD}/homeworks/HW08"
+alias 9="cd ${RD}/homeworks/HW09"
+alias 10="cd ${RD}/homeworks/HW10"
+alias 11="cd ${RD}/homeworks/HW11"
+alias 12="cd ${RD}/homeworks/HW12"
+alias 13="cd ${RD}/homeworks/HW13"
+alias 14="cd ${RD}/homeworks/HW14"
+alias 15="cd ${RD}/homeworks/HW15"
+alias 16="cd ${RD}/homeworks/HW16"
+alias 17="cd ${RD}/homeworks/HW17"
+alias 18="cd ${RD}/homeworks/HW18"
+alias 19="cd ${RD}/homeworks/HW19"
+alias 20="cd ${RD}/homeworks/HW20"
+alias 21="cd ${RD}/homeworks/HW21"
+EOL
+
+bash --rcfile ${RD}/.tbash.tmp
