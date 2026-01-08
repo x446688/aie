@@ -1,0 +1,2016 @@
+{
+  "df_1": {
+    "kmeans": [
+      {
+        "k": 2,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528
+        }
+      },
+      {
+        "k": 3,
+        "metrics": {
+          "silhouette": 0.39675785208949865,
+          "davies_bouldin": 0.9646042500366256,
+          "calinski_harabasz": 10446.638111140073
+        }
+      },
+      {
+        "k": 4,
+        "metrics": {
+          "silhouette": 0.38330054183984436,
+          "davies_bouldin": 1.1603490405338501,
+          "calinski_harabasz": 9427.499744196683
+        }
+      },
+      {
+        "k": 5,
+        "metrics": {
+          "silhouette": 0.3548010094581461,
+          "davies_bouldin": 1.273718688223341,
+          "calinski_harabasz": 8301.205993638541
+        }
+      },
+      {
+        "k": 6,
+        "metrics": {
+          "silhouette": 0.3585612534599804,
+          "davies_bouldin": 1.1822563058722355,
+          "calinski_harabasz": 7333.387619484842
+        }
+      },
+      {
+        "k": 7,
+        "metrics": {
+          "silhouette": 0.3246065284402385,
+          "davies_bouldin": 1.1941620120662246,
+          "calinski_harabasz": 6823.00784381894
+        }
+      },
+      {
+        "k": 8,
+        "metrics": {
+          "silhouette": 0.26887342610287457,
+          "davies_bouldin": 1.3141804010152645,
+          "calinski_harabasz": 6460.801051738207
+        }
+      },
+      {
+        "k": 9,
+        "metrics": {
+          "silhouette": 0.2533723319267118,
+          "davies_bouldin": 1.343964489505401,
+          "calinski_harabasz": 6255.217145281708
+        }
+      },
+      {
+        "k": 10,
+        "metrics": {
+          "silhouette": 0.26291441714215824,
+          "davies_bouldin": 1.27698455262466,
+          "calinski_harabasz": 6084.5030865672
+        }
+      },
+      {
+        "k": 11,
+        "metrics": {
+          "silhouette": 0.2658890699274932,
+          "davies_bouldin": 1.214110863627697,
+          "calinski_harabasz": 5898.163563797596
+        }
+      },
+      {
+        "k": 12,
+        "metrics": {
+          "silhouette": 0.2685629760948074,
+          "davies_bouldin": 1.1562638766664035,
+          "calinski_harabasz": 5784.863430516168
+        }
+      },
+      {
+        "k": 13,
+        "metrics": {
+          "silhouette": 0.27442565141483244,
+          "davies_bouldin": 1.1411854947778088,
+          "calinski_harabasz": 5716.7016395187775
+        }
+      },
+      {
+        "k": 14,
+        "metrics": {
+          "silhouette": 0.2787258404482488,
+          "davies_bouldin": 1.086926375720219,
+          "calinski_harabasz": 5744.579410097937
+        }
+      },
+      {
+        "k": 15,
+        "metrics": {
+          "silhouette": 0.28835066131026454,
+          "davies_bouldin": 1.0409225717749933,
+          "calinski_harabasz": 5729.707844145998
+        }
+      },
+      {
+        "k": 16,
+        "metrics": {
+          "silhouette": 0.28537028050526086,
+          "davies_bouldin": 1.03846511796412,
+          "calinski_harabasz": 5580.721663031734
+        }
+      },
+      {
+        "k": 17,
+        "metrics": {
+          "silhouette": 0.2801490190966997,
+          "davies_bouldin": 1.0480792518591047,
+          "calinski_harabasz": 5495.578615504757
+        }
+      },
+      {
+        "k": 18,
+        "metrics": {
+          "silhouette": 0.27453968319919525,
+          "davies_bouldin": 1.056582590902692,
+          "calinski_harabasz": 5420.029658607137
+        }
+      },
+      {
+        "k": 19,
+        "metrics": {
+          "silhouette": 0.2720445860130438,
+          "davies_bouldin": 1.061359084243461,
+          "calinski_harabasz": 5356.514276205823
+        }
+      },
+      {
+        "k": 20,
+        "metrics": {
+          "silhouette": 0.2677946103186128,
+          "davies_bouldin": 1.0631980159454324,
+          "calinski_harabasz": 5320.163181864113
+        }
+      }
+    ],
+    "dbscan": [
+      {
+        "eps": 0.1,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.7410573339510758,
+          "davies_bouldin": 0.2688941810554552,
+          "calinski_harabasz": 1467.953968409976,
+          "noise_frac": 0.9914166666666666
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.067711875252122,
+          "davies_bouldin": 0.7733193215988687,
+          "calinski_harabasz": 46.184358208325705,
+          "noise_frac": 0.69525
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.1984948532602899,
+          "davies_bouldin": 0.9419347938910205,
+          "calinski_harabasz": 68.03021662863797,
+          "noise_frac": 0.7869166666666667
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.2596807012553965,
+          "davies_bouldin": 1.007255854128814,
+          "calinski_harabasz": 98.79017140463775,
+          "noise_frac": 0.8741666666666666
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.1942803090607504,
+          "davies_bouldin": 1.0926454707702997,
+          "calinski_harabasz": 183.26418697518884,
+          "noise_frac": 0.9604166666666667
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.27070039911656174,
+          "davies_bouldin": 0.9019767304754396,
+          "calinski_harabasz": 74.57132794906364,
+          "noise_frac": 0.256
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.20243501064778996,
+          "davies_bouldin": 1.0148025681398194,
+          "calinski_harabasz": 168.67983847655543,
+          "noise_frac": 0.3175
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.12209323900274227,
+          "davies_bouldin": 0.9763381977445779,
+          "calinski_harabasz": 308.14515900504364,
+          "noise_frac": 0.4335
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.1652262191207022,
+          "davies_bouldin": 0.9644528958615065,
+          "calinski_harabasz": 541.0714345697361,
+          "noise_frac": 0.6221666666666666
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.22424776992383547,
+          "davies_bouldin": 0.7885891185518104,
+          "calinski_harabasz": 254.24003734357845,
+          "noise_frac": 0.07175
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.0788888492032825,
+          "davies_bouldin": 0.8183886401938145,
+          "calinski_harabasz": 584.8567308791289,
+          "noise_frac": 0.08608333333333333
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.005516126982509625,
+          "davies_bouldin": 0.8617836315741545,
+          "calinski_harabasz": 1428.1020183622716,
+          "noise_frac": 0.12733333333333333
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.19038574349065226,
+          "davies_bouldin": 0.9958502399866739,
+          "calinski_harabasz": 2929.1905526472538,
+          "noise_frac": 0.20983333333333334
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.05902547833735601,
+          "davies_bouldin": 0.7287722205918243,
+          "calinski_harabasz": 1049.6120857982537,
+          "noise_frac": 0.02125
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.27395988454239306,
+          "davies_bouldin": 0.9165790434682057,
+          "calinski_harabasz": 3795.6962996690827,
+          "noise_frac": 0.02525
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.28312477366901373,
+          "davies_bouldin": 0.946760657362018,
+          "calinski_harabasz": 4301.220982297523,
+          "noise_frac": 0.033666666666666664
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3655964732547347,
+          "davies_bouldin": 1.105617073026093,
+          "calinski_harabasz": 6993.106479197186,
+          "noise_frac": 0.06225
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.21463363513446818,
+          "davies_bouldin": 0.7545010780475487,
+          "calinski_harabasz": 2416.2606969330495,
+          "noise_frac": 0.006333333333333333
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.3809353172746799,
+          "davies_bouldin": 1.2552543275575556,
+          "calinski_harabasz": 8408.85885648928,
+          "noise_frac": 0.008
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.38163610426903044,
+          "davies_bouldin": 1.2517620051869875,
+          "calinski_harabasz": 8432.692533211448,
+          "noise_frac": 0.010833333333333334
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3845323404927463,
+          "davies_bouldin": 1.2397462212537893,
+          "calinski_harabasz": 8561.539180134101,
+          "noise_frac": 0.019166666666666665
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.26701480988931353,
+          "davies_bouldin": 0.9048873413154099,
+          "calinski_harabasz": 3724.2625339244564,
+          "noise_frac": 0.0035
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.37966373921178426,
+          "davies_bouldin": 1.2610690750829439,
+          "calinski_harabasz": 8351.833005629134,
+          "noise_frac": 0.004333333333333333
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.3803970025701055,
+          "davies_bouldin": 1.257600657425114,
+          "calinski_harabasz": 8392.437014289733,
+          "noise_frac": 0.006083333333333333
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3819454158563696,
+          "davies_bouldin": 1.251644470447146,
+          "calinski_harabasz": 8454.04834307867,
+          "noise_frac": 0.010916666666666667
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.26898660521770434,
+          "davies_bouldin": 0.9443830177025725,
+          "calinski_harabasz": 4176.525338019601,
+          "noise_frac": 0.0023333333333333335
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.379168211581392,
+          "davies_bouldin": 1.263124044543641,
+          "calinski_harabasz": 8330.876730950336,
+          "noise_frac": 0.003
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.37959302555576,
+          "davies_bouldin": 1.261412367697817,
+          "calinski_harabasz": 8354.89125960548,
+          "noise_frac": 0.003833333333333333
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3806142243776874,
+          "davies_bouldin": 1.2565167015495033,
+          "calinski_harabasz": 8408.060783387162,
+          "noise_frac": 0.006666666666666667
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.3278761761846192,
+          "davies_bouldin": 1.0344044022271917,
+          "calinski_harabasz": 5557.177955474202,
+          "noise_frac": 0.00175
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.3789659889162531,
+          "davies_bouldin": 1.2641889606465218,
+          "calinski_harabasz": 8325.05835756012,
+          "noise_frac": 0.0020833333333333333
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.3792894918066095,
+          "davies_bouldin": 1.2628236308641931,
+          "calinski_harabasz": 8342.749594350827,
+          "noise_frac": 0.00275
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.37986485807714726,
+          "davies_bouldin": 1.260172821048119,
+          "calinski_harabasz": 8376.835341309705,
+          "noise_frac": 0.004166666666666667
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.3692223099244918,
+          "davies_bouldin": 1.1252172862681384,
+          "calinski_harabasz": 6647.095854884807,
+          "noise_frac": 0.0008333333333333334
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.37858087446978905,
+          "davies_bouldin": 1.2657411503961313,
+          "calinski_harabasz": 8304.565583332018,
+          "noise_frac": 0.001
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.37858087446978905,
+          "davies_bouldin": 1.2657411503961313,
+          "calinski_harabasz": 8304.565583332018,
+          "noise_frac": 0.001
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.37858087446978905,
+          "davies_bouldin": 1.2657411503961313,
+          "calinski_harabasz": 8304.565583332018,
+          "noise_frac": 0.001
+        }
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.3743071287912773,
+          "davies_bouldin": 1.0320215921950404,
+          "calinski_harabasz": 7096.28489075467,
+          "noise_frac": 0.0004166666666666667
+        }
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.3836639710520922,
+          "davies_bouldin": 1.1590757053677831,
+          "calinski_harabasz": 9456.27699849212,
+          "noise_frac": 0.0005833333333333334
+        }
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.3836639710520922,
+          "davies_bouldin": 1.1590757053677831,
+          "calinski_harabasz": 9456.27699849212,
+          "noise_frac": 0.0005833333333333334
+        }
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.383734806495279,
+          "davies_bouldin": 1.158923149122788,
+          "calinski_harabasz": 9460.941982193219,
+          "noise_frac": 0.0006666666666666666
+        }
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.3967888223601393,
+          "davies_bouldin": 0.9644102343879997,
+          "calinski_harabasz": 10446.597694416176,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.3967888223601393,
+          "davies_bouldin": 0.9644102343879997,
+          "calinski_harabasz": 10446.597694416176,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.3967888223601393,
+          "davies_bouldin": 0.9644102343879997,
+          "calinski_harabasz": 10446.597694416176,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3967888223601393,
+          "davies_bouldin": 0.9644102343879997,
+          "calinski_harabasz": 10446.597694416176,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.5216395622404242,
+          "davies_bouldin": 0.6853295219054459,
+          "calinski_harabasz": 11786.954622671528,
+          "noise_frac": 0.0
+        }
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 10,
+        "metrics": null
+      }
+    ]
+  },
+  "df_2": {
+    "kmeans": [
+      {
+        "k": 2,
+        "metrics": {
+          "silhouette": 0.3068610017701601,
+          "davies_bouldin": 1.3234721699867644,
+          "calinski_harabasz": 3573.3933329348392
+        }
+      },
+      {
+        "k": 3,
+        "metrics": {
+          "silhouette": 0.27004522856451274,
+          "davies_bouldin": 1.2226592908750664,
+          "calinski_harabasz": 3082.272074544635
+        }
+      },
+      {
+        "k": 4,
+        "metrics": {
+          "silhouette": 0.2514805632951281,
+          "davies_bouldin": 1.2998187751155688,
+          "calinski_harabasz": 2915.565357085485
+        }
+      },
+      {
+        "k": 5,
+        "metrics": {
+          "silhouette": 0.25211519070471305,
+          "davies_bouldin": 1.2138337452137868,
+          "calinski_harabasz": 2703.5897042630368
+        }
+      },
+      {
+        "k": 6,
+        "metrics": {
+          "silhouette": 0.25981972898842143,
+          "davies_bouldin": 1.159521129561412,
+          "calinski_harabasz": 2571.0909314132814
+        }
+      },
+      {
+        "k": 7,
+        "metrics": {
+          "silhouette": 0.2536432556085209,
+          "davies_bouldin": 1.1723338222249964,
+          "calinski_harabasz": 2453.500966352129
+        }
+      },
+      {
+        "k": 8,
+        "metrics": {
+          "silhouette": 0.25230459123826915,
+          "davies_bouldin": 1.1001780140666457,
+          "calinski_harabasz": 2408.5165874822683
+        }
+      },
+      {
+        "k": 9,
+        "metrics": {
+          "silhouette": 0.2524627947838528,
+          "davies_bouldin": 1.0895692637687338,
+          "calinski_harabasz": 2379.9899548084677
+        }
+      },
+      {
+        "k": 10,
+        "metrics": {
+          "silhouette": 0.2608689477630066,
+          "davies_bouldin": 1.057141940706856,
+          "calinski_harabasz": 2408.1920107466526
+        }
+      },
+      {
+        "k": 11,
+        "metrics": {
+          "silhouette": 0.2659443673992366,
+          "davies_bouldin": 1.0251148491223139,
+          "calinski_harabasz": 2361.2009165252766
+        }
+      },
+      {
+        "k": 12,
+        "metrics": {
+          "silhouette": 0.26363892881483025,
+          "davies_bouldin": 1.03951824322711,
+          "calinski_harabasz": 2308.542461891127
+        }
+      },
+      {
+        "k": 13,
+        "metrics": {
+          "silhouette": 0.26541233783193924,
+          "davies_bouldin": 1.0186858548430038,
+          "calinski_harabasz": 2278.6505111689994
+        }
+      },
+      {
+        "k": 14,
+        "metrics": {
+          "silhouette": 0.27186380006741345,
+          "davies_bouldin": 0.9924120295144151,
+          "calinski_harabasz": 2305.302085464939
+        }
+      },
+      {
+        "k": 15,
+        "metrics": {
+          "silhouette": 0.27601627890666625,
+          "davies_bouldin": 0.9664375751377642,
+          "calinski_harabasz": 2300.2675467474764
+        }
+      },
+      {
+        "k": 16,
+        "metrics": {
+          "silhouette": 0.2838542344783782,
+          "davies_bouldin": 0.9555661953895087,
+          "calinski_harabasz": 2329.4371836478826
+        }
+      },
+      {
+        "k": 17,
+        "metrics": {
+          "silhouette": 0.28271302736758425,
+          "davies_bouldin": 0.9609985152816612,
+          "calinski_harabasz": 2310.6077654316787
+        }
+      },
+      {
+        "k": 18,
+        "metrics": {
+          "silhouette": 0.27931135924632655,
+          "davies_bouldin": 0.959660863454173,
+          "calinski_harabasz": 2275.3837173957195
+        }
+      },
+      {
+        "k": 19,
+        "metrics": {
+          "silhouette": 0.27892044023933305,
+          "davies_bouldin": 0.9679402592758775,
+          "calinski_harabasz": 2267.8764590641267
+        }
+      },
+      {
+        "k": 20,
+        "metrics": {
+          "silhouette": 0.28138732499450486,
+          "davies_bouldin": 0.935493071248828,
+          "calinski_harabasz": 2268.515211059081
+        }
+      }
+    ],
+    "dbscan": [
+      {
+        "eps": 0.1,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.39010258735345293,
+          "davies_bouldin": 0.8885062178296018,
+          "calinski_harabasz": 25.970112124002657,
+          "noise_frac": 0.227875
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.40824444923935044,
+          "davies_bouldin": 0.9155986943658038,
+          "calinski_harabasz": 41.897643910363236,
+          "noise_frac": 0.295375
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.12911645090965929,
+          "davies_bouldin": 0.876438069307012,
+          "calinski_harabasz": 158.77342657514544,
+          "noise_frac": 0.47925
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.5812458584406734,
+          "davies_bouldin": 0.5779820069800065,
+          "calinski_harabasz": 2758.1225203015906,
+          "noise_frac": 0.9185
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.31699947331306494,
+          "davies_bouldin": 0.5715486488380572,
+          "calinski_harabasz": 58.42563322177175,
+          "noise_frac": 0.07625
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.09863468386381938,
+          "davies_bouldin": 0.6758487918783768,
+          "calinski_harabasz": 156.71625719936517,
+          "noise_frac": 0.08725
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.035651452172737595,
+          "davies_bouldin": 0.7924076487866872,
+          "calinski_harabasz": 377.85757728768266,
+          "noise_frac": 0.102
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.10136573219774914,
+          "davies_bouldin": 0.955093271025593,
+          "calinski_harabasz": 768.5791007146563,
+          "noise_frac": 0.14725
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.3926855994763872,
+          "davies_bouldin": 0.5632463151338643,
+          "calinski_harabasz": 12.106481373038678,
+          "noise_frac": 0.045
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.3006196073675922,
+          "davies_bouldin": 0.5795984678176964,
+          "calinski_harabasz": 16.826952397182385,
+          "noise_frac": 0.05925
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.08522505460147263,
+          "davies_bouldin": 0.5896990784253007,
+          "calinski_harabasz": 21.95165666653018,
+          "noise_frac": 0.072375
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.3606225071870963,
+          "davies_bouldin": 0.6217426330714738,
+          "calinski_harabasz": 15.576997448346495,
+          "noise_frac": 0.026625
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.2252133550955667,
+          "davies_bouldin": 0.661888782025872,
+          "calinski_harabasz": 24.579547014898626,
+          "noise_frac": 0.041875
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.1348634337829502,
+          "davies_bouldin": 0.6041569055438092,
+          "calinski_harabasz": 31.396114775294762,
+          "noise_frac": 0.061875
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.2590611818330739,
+          "davies_bouldin": 0.7893008109633469,
+          "calinski_harabasz": 23.354350969513312,
+          "noise_frac": 0.0145
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.06250267848105012,
+          "davies_bouldin": 0.8208734181589096,
+          "calinski_harabasz": 40.084109353886426,
+          "noise_frac": 0.0255
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.05824642298525934,
+          "davies_bouldin": 0.7896110332641595,
+          "calinski_harabasz": 49.82201468663914,
+          "noise_frac": 0.045
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.25120225459401474,
+          "davies_bouldin": 0.742073163972055,
+          "calinski_harabasz": 26.168575636304777,
+          "noise_frac": 0.063625
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.17884544141096673,
+          "davies_bouldin": 0.6086038180540435,
+          "calinski_harabasz": 24.06536441127794,
+          "noise_frac": 0.00775
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.103538250772225,
+          "davies_bouldin": 0.6985153859362974,
+          "calinski_harabasz": 55.5169352329686,
+          "noise_frac": 0.013
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.1381888831919438,
+          "davies_bouldin": 0.9019700377403744,
+          "calinski_harabasz": 69.33168604795442,
+          "noise_frac": 0.022625
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.24789581494336377,
+          "davies_bouldin": 0.6607557076242998,
+          "calinski_harabasz": 70.87707755653412,
+          "noise_frac": 0.054625
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.10304095433946658,
+          "davies_bouldin": 0.5272833298300047,
+          "calinski_harabasz": 11.394595934029907,
+          "noise_frac": 0.006125
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.1621611703970625,
+          "davies_bouldin": 0.6738267407594452,
+          "calinski_harabasz": 17.772660599018536,
+          "noise_frac": 0.010375
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.27829395718438044,
+          "davies_bouldin": 0.6728006293714804,
+          "calinski_harabasz": 19.34402086384803,
+          "noise_frac": 0.015
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.31453511181018906,
+          "davies_bouldin": 0.6125808847921219,
+          "calinski_harabasz": 109.12296602320355,
+          "noise_frac": 0.047125
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.06761366743184583,
+          "davies_bouldin": 0.4974009505713921,
+          "calinski_harabasz": 10.522930978066588,
+          "noise_frac": 0.004625
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.34554999921850155,
+          "davies_bouldin": 0.5509870790351397,
+          "calinski_harabasz": 10.405774777673173,
+          "noise_frac": 0.007125
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.3049523469313708,
+          "davies_bouldin": 0.6006770767549849,
+          "calinski_harabasz": 114.42869204908139,
+          "noise_frac": 0.036375
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.16001639034010803,
+          "davies_bouldin": 0.47206763361847276,
+          "calinski_harabasz": 11.61073048076511,
+          "noise_frac": 0.003125
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.2792582569177799,
+          "davies_bouldin": 0.5647281803576242,
+          "calinski_harabasz": 11.408109276392839,
+          "noise_frac": 0.005125
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.4039904242290432,
+          "davies_bouldin": 0.6477209728977493,
+          "calinski_harabasz": 104.46345686681886,
+          "noise_frac": 0.021875
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.3861601702357899,
+          "davies_bouldin": 0.4545404058460492,
+          "calinski_harabasz": 12.79587060147715,
+          "noise_frac": 0.001875
+        }
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.43542024984465466,
+          "davies_bouldin": 0.3953334111240787,
+          "calinski_harabasz": 13.653112004255219,
+          "noise_frac": 0.000875
+        }
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 10,
+        "metrics": null
+      }
+    ]
+  },
+  "df_3": {
+    "kmeans": [
+      {
+        "k": 2,
+        "metrics": {
+          "silhouette": 0.2989049482650359,
+          "davies_bouldin": 1.3554682309311274,
+          "calinski_harabasz": 7004.795629839117
+        }
+      },
+      {
+        "k": 3,
+        "metrics": {
+          "silhouette": 0.31554470037825183,
+          "davies_bouldin": 1.1577256320598661,
+          "calinski_harabasz": 6957.162639510166
+        }
+      },
+      {
+        "k": 4,
+        "metrics": {
+          "silhouette": 0.3146186578997614,
+          "davies_bouldin": 1.1596756007747975,
+          "calinski_harabasz": 6492.278930703822
+        }
+      },
+      {
+        "k": 5,
+        "metrics": {
+          "silhouette": 0.299296734735238,
+          "davies_bouldin": 1.1685563259560328,
+          "calinski_harabasz": 6125.127992652557
+        }
+      },
+      {
+        "k": 6,
+        "metrics": {
+          "silhouette": 0.29314949913879973,
+          "davies_bouldin": 1.1407688365074906,
+          "calinski_harabasz": 6097.475389176514
+        }
+      },
+      {
+        "k": 7,
+        "metrics": {
+          "silhouette": 0.2798534492101504,
+          "davies_bouldin": 1.2184650902827825,
+          "calinski_harabasz": 5858.3449065085215
+        }
+      },
+      {
+        "k": 8,
+        "metrics": {
+          "silhouette": 0.28949142967979535,
+          "davies_bouldin": 1.1472308916005955,
+          "calinski_harabasz": 5630.838100907985
+        }
+      },
+      {
+        "k": 9,
+        "metrics": {
+          "silhouette": 0.28479131908460764,
+          "davies_bouldin": 1.123538246631349,
+          "calinski_harabasz": 5543.965528413644
+        }
+      },
+      {
+        "k": 10,
+        "metrics": {
+          "silhouette": 0.2788945201029795,
+          "davies_bouldin": 1.1437855892599376,
+          "calinski_harabasz": 5386.123818961418
+        }
+      },
+      {
+        "k": 11,
+        "metrics": {
+          "silhouette": 0.27631908370811337,
+          "davies_bouldin": 1.142855452127215,
+          "calinski_harabasz": 5207.3680574003565
+        }
+      },
+      {
+        "k": 12,
+        "metrics": {
+          "silhouette": 0.27597762131738773,
+          "davies_bouldin": 1.1394250359036346,
+          "calinski_harabasz": 5101.720590137842
+        }
+      },
+      {
+        "k": 13,
+        "metrics": {
+          "silhouette": 0.2708346152326347,
+          "davies_bouldin": 1.108474954800371,
+          "calinski_harabasz": 5059.04734384375
+        }
+      },
+      {
+        "k": 14,
+        "metrics": {
+          "silhouette": 0.2727141627581645,
+          "davies_bouldin": 1.0950554756562476,
+          "calinski_harabasz": 4991.013836170108
+        }
+      },
+      {
+        "k": 15,
+        "metrics": {
+          "silhouette": 0.2704264370246084,
+          "davies_bouldin": 1.0931584890949884,
+          "calinski_harabasz": 4881.2877867225325
+        }
+      },
+      {
+        "k": 16,
+        "metrics": {
+          "silhouette": 0.2677974739934453,
+          "davies_bouldin": 1.0787079362968925,
+          "calinski_harabasz": 4751.169503703985
+        }
+      },
+      {
+        "k": 17,
+        "metrics": {
+          "silhouette": 0.263559678167275,
+          "davies_bouldin": 1.1045405505728931,
+          "calinski_harabasz": 4641.719720184776
+        }
+      },
+      {
+        "k": 18,
+        "metrics": {
+          "silhouette": 0.2563220267262474,
+          "davies_bouldin": 1.1035288081473782,
+          "calinski_harabasz": 4532.55503800317
+        }
+      },
+      {
+        "k": 19,
+        "metrics": {
+          "silhouette": 0.2518580043054598,
+          "davies_bouldin": 1.1409759731228266,
+          "calinski_harabasz": 4460.594961516501
+        }
+      },
+      {
+        "k": 20,
+        "metrics": {
+          "silhouette": 0.2505865350430932,
+          "davies_bouldin": 1.1404883387112261,
+          "calinski_harabasz": 4358.404493985511
+        }
+      }
+    ],
+    "dbscan": [
+      {
+        "eps": 0.1,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.21619688572261375,
+          "davies_bouldin": 0.6244932477348533,
+          "calinski_harabasz": 244.10324036468342,
+          "noise_frac": 0.6930666666666667
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.11533951307769331,
+          "davies_bouldin": 0.7686729838616897,
+          "calinski_harabasz": 322.62382222494006,
+          "noise_frac": 0.7964
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": 0.26244660266045533,
+          "davies_bouldin": 0.799573797121559,
+          "calinski_harabasz": 1414.3179399002904,
+          "noise_frac": 0.9122666666666667
+        }
+      },
+      {
+        "eps": 0.1,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.8121356112341535,
+          "davies_bouldin": 0.24494686691049247,
+          "calinski_harabasz": 3564.021041770511,
+          "noise_frac": 0.9959333333333333
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.32659207560554826,
+          "davies_bouldin": 0.7968017941411696,
+          "calinski_harabasz": 49.78535193102011,
+          "noise_frac": 0.21413333333333334
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.2954569602107277,
+          "davies_bouldin": 0.8688168519550314,
+          "calinski_harabasz": 98.22881284072231,
+          "noise_frac": 0.2750666666666667
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.1260333990214993,
+          "davies_bouldin": 0.9303979731084301,
+          "calinski_harabasz": 230.1933628890121,
+          "noise_frac": 0.4019333333333333
+        }
+      },
+      {
+        "eps": 0.2,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.125187224179318,
+          "davies_bouldin": 0.8682241224293811,
+          "calinski_harabasz": 628.4116734794229,
+          "noise_frac": 0.5952
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.5049539078834836,
+          "davies_bouldin": 0.7993240890136876,
+          "calinski_harabasz": 41.060807726232014,
+          "noise_frac": 0.06973333333333333
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.4339677803361386,
+          "davies_bouldin": 0.860777952208614,
+          "calinski_harabasz": 104.80149397085886,
+          "noise_frac": 0.0868
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.2360762111710672,
+          "davies_bouldin": 0.9304360273636121,
+          "calinski_harabasz": 323.43126955303904,
+          "noise_frac": 0.12533333333333332
+        }
+      },
+      {
+        "eps": 0.3,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.03770716012015256,
+          "davies_bouldin": 1.2321530578469555,
+          "calinski_harabasz": 1788.4185468058356,
+          "noise_frac": 0.21566666666666667
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.4842937479192791,
+          "davies_bouldin": 0.7807974504868644,
+          "calinski_harabasz": 26.88195759863783,
+          "noise_frac": 0.027666666666666666
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.38911635088730046,
+          "davies_bouldin": 0.8311248609563138,
+          "calinski_harabasz": 64.0160406692276,
+          "noise_frac": 0.0346
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.03983641036245177,
+          "davies_bouldin": 1.0100179217792784,
+          "calinski_harabasz": 1256.321544672525,
+          "noise_frac": 0.04953333333333333
+        }
+      },
+      {
+        "eps": 0.4,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.11998003435188632,
+          "davies_bouldin": 1.020402920304015,
+          "calinski_harabasz": 2125.743275402626,
+          "noise_frac": 0.07513333333333333
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.39463062030733936,
+          "davies_bouldin": 0.6910113827307476,
+          "calinski_harabasz": 6.7658068438017125,
+          "noise_frac": 0.0116
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.23220984196567512,
+          "davies_bouldin": 0.765630242505171,
+          "calinski_harabasz": 10.074349172271594,
+          "noise_frac": 0.0156
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.10435334322693379,
+          "davies_bouldin": 0.8424164793866376,
+          "calinski_harabasz": 12.755893055371436,
+          "noise_frac": 0.0222
+        }
+      },
+      {
+        "eps": 0.5,
+        "min_samples": 10,
+        "metrics": {
+          "silhouette": 0.14243088104506607,
+          "davies_bouldin": 1.3932351326290715,
+          "calinski_harabasz": 1640.790703583512,
+          "noise_frac": 0.0324
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.29694779257795517,
+          "davies_bouldin": 0.6757103946103729,
+          "calinski_harabasz": 6.346531079475241,
+          "noise_frac": 0.005733333333333333
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.051198755987708955,
+          "davies_bouldin": 0.6785927633709955,
+          "calinski_harabasz": 8.332410115344734,
+          "noise_frac": 0.0076
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 5,
+        "metrics": {
+          "silhouette": -0.03375872869321248,
+          "davies_bouldin": 0.8561023957825725,
+          "calinski_harabasz": 16.29618212999799,
+          "noise_frac": 0.010133333333333333
+        }
+      },
+      {
+        "eps": 0.6,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": -0.13042107223593433,
+          "davies_bouldin": 0.6671483697070417,
+          "calinski_harabasz": 7.3472859211780195,
+          "noise_frac": 0.0038666666666666667
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": -0.005770220859344001,
+          "davies_bouldin": 0.6874485831684833,
+          "calinski_harabasz": 9.484190257296353,
+          "noise_frac": 0.0048
+        }
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.65,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.1324922769685132,
+          "davies_bouldin": 0.5775402736419899,
+          "calinski_harabasz": 11.645895555603706,
+          "noise_frac": 0.0028
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.23153154821926533,
+          "davies_bouldin": 0.5967446261765507,
+          "calinski_harabasz": 12.862169698799716,
+          "noise_frac": 0.0029333333333333334
+        }
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.7,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 2,
+        "metrics": {
+          "silhouette": 0.23102522862375743,
+          "davies_bouldin": 0.597081589710098,
+          "calinski_harabasz": 12.838810207662906,
+          "noise_frac": 0.0018666666666666666
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 3,
+        "metrics": {
+          "silhouette": 0.23102522862375743,
+          "davies_bouldin": 0.597081589710098,
+          "calinski_harabasz": 12.838810207662906,
+          "noise_frac": 0.0018666666666666666
+        }
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.75,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 0.9,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 1.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 1.5,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 2.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 2.5,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.0,
+        "min_samples": 10,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 2,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 3,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 5,
+        "metrics": null
+      },
+      {
+        "eps": 3.5,
+        "min_samples": 10,
+        "metrics": null
+      }
+    ]
+  }
+}

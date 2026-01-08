@@ -1,0 +1,35 @@
+{
+  "df_1": {
+    "kmeans": {
+      "k": 2,
+      "silhouette": 0.5216395622404242
+    },
+    "dbscan": {
+      "eps": 0.1,
+      "min_samples": 2,
+      "silhouette": 0.7410573339510758
+    }
+  },
+  "df_2": {
+    "kmeans": {
+      "k": 2,
+      "silhouette": 0.3068610017701601
+    },
+    "dbscan": {
+      "eps": 0.1,
+      "min_samples": 10,
+      "silhouette": 0.5812458584406734
+    }
+  },
+  "df_3": {
+    "kmeans": {
+      "k": 3,
+      "silhouette": 0.31554470037825183
+    },
+    "dbscan": {
+      "eps": 0.1,
+      "min_samples": 10,
+      "silhouette": 0.8121356112341535
+    }
+  }
+}
