@@ -1,5 +1,7 @@
 {
   "experiment_id": "E4",
+  "dataset": "EMNIST",
+  "seed": 42,
   "optimizer": "Adam",
   "lr": 0.001,
   "momentum": 0,
