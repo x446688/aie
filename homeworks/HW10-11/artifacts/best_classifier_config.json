@@ -1,0 +1,32 @@
+{
+  "experiment_id": "C4",
+  "model": "resnet18-ft",
+  "dataset": "STL10",
+  "seed": 42,
+  "batch_size": 64,
+  "transforms": {
+    "train": [
+      "Resize(256)",
+      "RandomResizedCrop(224, scale=(0.7, 1.0))",
+      "RandomHorizontalFlip(p=0.5)",
+      "ToTensor()",
+      "Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))"
+    ],
+    "eval": [
+      "Resize(256)",
+      "CenterCrop(224)",
+      "ToTensor()",
+      "Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))"
+    ]
+  },
+  "optimizer": "Adam",
+  "lr": {
+    "layer4": 0.0001,
+    "fc": 0.001,
+    "optimizer-ft": 0.001
+  },
+  "fc": "nn.Linear",
+  "weight_decay": 0.0001,
+  "epochs_trained": 12,
+  "notes": "ResNet18 с pretrained weights; частичное fine-tune (layer4 + fc). Значения для transforms.Normalize взяты стандартные."
+}
