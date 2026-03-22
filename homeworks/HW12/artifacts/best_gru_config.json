@@ -1,0 +1,16 @@
+{
+  "model_summary": "GRU-модель для временных рядов",
+  "head": "nn.Linear",
+  "window_size": 28,
+  "input_size": 1,
+  "hidden_size": 64,
+  "num_layers": 2,
+  "batch_size": 64,
+  "lr": 0.0005,
+  "epochs_trained": 30,
+  "dropout": 0,
+  "optimizer": "Adam",
+  "dataset": "S12-hw-dataset.csv",
+  "seed": 42,
+  "scaler": "StandardScaler"
+}
