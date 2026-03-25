@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project"
+version = "0.1.0"
+description = "Итоговый проект по курсу Инженерия Искусственного Интеллекта"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.135.2",
+    "matplotlib>=3.10.8",
+    "pandas>=3.0.1",
+    "pytest>=9.0.2",
+    "python-multipart>=0.0.22",
+    "typer>=0.24.1",
+    "uvicorn>=0.42.0",
+]
+
+[project.scripts]
+service = "project.cli:app"
