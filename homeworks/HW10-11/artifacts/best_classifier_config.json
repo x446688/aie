@@ -27,6 +27,6 @@
   },
   "fc": "nn.Linear",
   "weight_decay": 0.0001,
-  "epochs_trained": 12,
-  "notes": "ResNet18 с pretrained weights; частичное fine-tune (layer4 + fc). Значения для transforms.Normalize взяты стандартные."
+  "epochs_trained": 24,
+  "notes": "ResNet18 с pretrained weights; частичное fine-tune (layer4 + fc). Значения для transforms.Normalize взяты стандартные. 12 epochs - head, 12 epochs - fine-tune"
 }

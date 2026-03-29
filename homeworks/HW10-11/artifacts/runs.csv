@@ -2,6 +2,6 @@ experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_v
 C1,classification,STL10,42,(simple-cnn-base): простая CNN без аугментаций,Adam,0.001,12.0,0.595,,,,,
 C2,classification,STL10,42,"(simple-cnn-aug): та же CNN, но с разумными аугментациями",Adam,0.001,12.0,0.582,,,,,добавлены аугментации colorjitter и randomrotation
 C3,classification,STL10,42,"ResNet18 с pretrained weights; backbone заморожен, обучается только классификационная голова",Adam,0.001,12.0,0.94,,,,,
-C4,classification,STL10,42,ResNet18 с pretrained weights; частичное fine-tune,Adam,0.0001,12.0,0.949,0.948,,,,"lr указан для layer4, для fc и optim - 1e-3 "
+C4,classification,STL10,42,ResNet18 с pretrained weights; частичное fine-tune,Adam,0.0001,12.0,0.951,0.94425,,,,"lr указан для layer4, для fc и optim - 1e-3 "
 V1,detection,Pascal VOC,42,inference при score_threshold = 0.3,,,,,,0.4631195940123053,0.9198681374413008,0.8762351522061966,score_threshold = 0.3
 V2,detection,Pascal VOC,42,inference при score_threshold = 0.7,,,,,,0.7215673609989385,0.8498795486242646,0.8804015555673431,score_threshold = 0.7
