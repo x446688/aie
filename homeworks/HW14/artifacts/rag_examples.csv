@@ -1,0 +1,6 @@
+question,answer,retrieved_sources
+What is the purpose of Automake?,file is simply a series of variable definitions. The generated Makefile.ins are compliant with the GNU Makefile standards.,"doc_0, doc_4, doc_0"
+What are the Autotools?,The Autotools are tools that will create a GNU Build System for your package. there also exist reasons why you may want NOT to use the Autotools...,"doc_3, doc_1, doc_3"
+What does make installcheck do?,Our toy package is no better: make installcheck does nothing. Presently most packages do not have any installcheck tests because the,"doc_2, doc_2, doc_2"
+What is the role of the configure script in the GNU Build System?,is rooted in the directory containing the configure script. The build tree is rooted in the current directory at the time configure was,"doc_3, doc_8, doc_1"
+"What are the --build, --host, and --target configure options used for?","The following configure options are used to specify each of them: --build=build - The system on which the package is When the --host is used, configure will search for the cross-compiling suite for this platform.","doc_9, doc_9, doc_9"

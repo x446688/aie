@@ -1,0 +1,9 @@
+query,expected_source,retrieved_sources,hit_at_k
+What is the purpose of Automake?,doc_0,"doc_0, doc_4",1
+What are the Autotools?,"doc_0, doc_1, doc_3","doc_3, doc_1",1
+What does make installcheck do?,"doc_2, doc_5",doc_2,1
+How many trees tdoes the GNU Build System distinguish?,doc_8,doc_8,1
+What is a VPATH build?,doc_8,doc_8,1
+How does Automake handle comments in a Makefile.am file?,doc_4,"doc_4, doc_0",1
+"What are the --build, --host, and --target configure options used for?",doc_9,doc_9,1
+What is the role of the configure script in the GNU Build System?,"doc_1, doc_2, doc_8","doc_3, doc_8, doc_1",1
