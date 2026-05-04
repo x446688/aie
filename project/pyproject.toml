@@ -23,3 +23,8 @@ dependencies = [
 [project.scripts]
 service = "project.cli:app"
 test = "project.test:run_all_tests"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
