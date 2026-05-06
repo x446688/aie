@@ -16,6 +16,7 @@ dependencies = [
     "python-multipart>=0.0.22",
     "scikit-learn>=1.8.0",
     "torch>=2.11.0",
+    "torchvision>=0.26.0",
     "typer>=0.24.1",
     "uvicorn>=0.42.0",
 ]
