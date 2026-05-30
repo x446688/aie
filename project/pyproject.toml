@@ -10,15 +10,17 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.135.2",
+    "ipython>=9.13.0",
     "matplotlib>=3.10.8",
     "pandas>=3.0.1",
     "pytest>=9.0.2",
     "python-multipart>=0.0.22",
+    "pyyaml>=6.0.3",
     "scikit-learn>=1.8.0",
     "torch>=2.11.0",
     "torchvision>=0.26.0",
     "typer>=0.24.1",
-    "uvicorn>=0.42.0",
+    "uvicorn[standard]>=0.42.0",
 ]
 
 [project.scripts]
@@ -28,4 +30,5 @@ test = "project.test:run_all_tests"
 [dependency-groups]
 dev = [
     "ipykernel>=7.2.0",
+    "ipython>=9.13.0",
 ]
