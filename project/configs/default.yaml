@@ -1,0 +1,87 @@
+# configs/default.yaml
+project:
+  name: product-value-forecast
+  random_state: 42
+  description: "LSTM/GRU time-series forecasting for product value"
+
+data:
+  # Default dataset for training (override via CLI)
+  default_path: "data/example.csv"
+  # Column detection: auto or explicit mapping
+  auto_detect_columns: true
+  # If auto_detect fails, use these fallbacks
+  column_mapping:
+    date: ["date", "timestamp", "datetime", "index"]
+    value: ["value", "price", "demand", "target"]
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+model:
+  # Which model to deploy: "lstm", "gru", "ridge", "naive", or "best"
+  deploy: "best"
+  
+  # Shared hyperparameters
+  window_size: 28
+  input_size: 1
+  
+  # LSTM config
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.1
+    epochs: 50
+    lr: 0.0005
+    batch_size: 64
+    patience: 10
+    
+  # GRU config (same structure for fair comparison)
+  gru:
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.1
+    epochs: 50
+    lr: 0.0005
+    batch_size: 64
+    patience: 10
+    
+  # Ridge baseline config
+  ridge:
+    alpha: 1.0
+    max_iter: 1000
+    
+  # Naive baseline: last-value forecast (no params)
+
+training:
+  # Save all models or only best?
+  save_all: false
+  # Metric to select best model: "MAE", "RMSE", or "MAPE" (lower is better)
+  best_metric: "RMSE"
+  # Seed for reproducibility
+  seed: 42
+
+artifacts:
+  dir: "artifacts"
+  # Output filenames
+  best_model: "best_model.joblib"
+  all_models_dir: "models"  # Subfolder if save_all=true
+  metrics: "metrics.json"
+  history: "training_history.json"
+  scaler: "scaler.joblib"  # Standalone scaler for debugging
+
+service:
+  host: "0.0.0.0"
+  port: 8000
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  # Enable/disable Swagger UI
+  docs_enabled: true
+
+logging:
+  # Console + file logging
+  console: true
+  file: "logs/app.log"
+  # Rotate logs when they get big
+  max_bytes: 10485760  # 10 MB
+  backup_count: 3

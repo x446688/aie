@@ -6,7 +6,7 @@ eda_cli – мини-утилита для EDA CSV-файлов.
 - на Семинаре 04 как библиотека для обёрток (HTTP-сервис и т.п.).
 """
 
-from . import core, viz, datagen, test
+from . import core, viz, datagen, test, flow, models
 
-__all__ = ["core", "viz", "datagen", "test"]
+__all__ = ["core", "viz", "datagen", "test", "flow", "models"]
 __version__ = "0.1.0"

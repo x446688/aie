@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 import random
 from pathlib import Path
 
-def gen_base_series(n_days: int = 1100, start: str = "2021-01-01", k_sin: int = 2, seed: int = 42) -> pd.DataFrame:
+
+def gen_base_series(
+    n_days: int = 1100, start: str = "2021-01-01", k_sin: int = 2, seed: int = 42
+) -> pd.DataFrame:
     """Генерирует реалистичный синтетический временной ряд с несколькими компонентами."""
     random.seed(seed)
     np.random.seed(seed)
@@ -13,8 +16,12 @@ def gen_base_series(n_days: int = 1100, start: str = "2021-01-01", k_sin: int = 
 
     # Компоненты временного ряда:
     trend = 60 + 0.04 * t  # Линейный тренд: начальное значение 60, рост 0.04 в день
-    weekly = 7 * np.sin(k_sin * np.pi * t / 7) + 2.5 * np.cos(k_sin * np.pi * t / 7)  # Недельная сезонность
-    long_wave = 9 * np.sin(k_sin * np.pi * t / 365.25)  # Долгосрочная (годовая) сезонность
+    weekly = 7 * np.sin(k_sin * np.pi * t / 7) + 2.5 * np.cos(
+        k_sin * np.pi * t / 7
+    )  # Недельная сезонность
+    long_wave = 9 * np.sin(
+        k_sin * np.pi * t / 365.25
+    )  # Долгосрочная (годовая) сезонность
     noise = np.random.normal(0, 2.7, size=n_days)  # Случайный шум
 
     # Бонус для выходных дней (суббота и воскресенье)
@@ -34,6 +41,7 @@ def gen_base_series(n_days: int = 1100, start: str = "2021-01-01", k_sin: int = 
     y = np.maximum(y, 0.1)  # Убеждаемся, что значения положительные
 
     return pd.DataFrame({"date": dates, "value": y})
+
 
 def display_series(df: pd.DataFrame, dir: Path):
     if not pd.DataFrame:

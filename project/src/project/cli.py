@@ -14,6 +14,7 @@ from .core import (
     flatten_summary_for_print,
     value_table,
     summarize_dataset,
+    train,
     top_categories,
 )
 from .viz import (
@@ -24,7 +25,7 @@ from .viz import (
     save_top_categories_tables,
 )
 
-app = typer.Typer(help="Мини-CLI для EDA CSV-файлов")
+app = typer.Typer(help="Утилита для предсказания спроса на товар по времени.")
 
 
 def _load_csv(
@@ -39,6 +40,7 @@ def _load_csv(
     except Exception as exc:  # noqa: BLE001
         raise typer.BadParameter(f"Не удалось прочитать CSV: {exc}") from exc
 
+
 @app.command()
 def head(
     path: str = typer.Argument(..., help="Путь к CSV-файлу."),
@@ -51,6 +53,34 @@ def head(
     """
     df = _load_csv(Path(path), sep=sep, encoding=encoding)
     typer.echo(df.head(n).to_string(index=False))
+
+
+@app.command()
+def train_models(
+    path: str = typer.Argument(..., help="Путь к CSV-файлу."),
+    window_size: Optional[int] = typer.Option(
+        None, help="Window size (overrides config)"
+    ),
+    dataset_name: str = typer.Option("default", help="Name for this training run"),
+    sep: str = typer.Option(",", help="CSV separator"),
+    encoding: str = typer.Option("utf-8", help="File encoding"),
+) -> None:
+    """Train all models and save the best one."""
+    import logging
+
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
+    )
+
+    df = _load_csv(Path(path), sep=sep, encoding=encoding)
+    result = train(df, window_size=window_size, dataset_name=dataset_name)
+
+    typer.echo(f"\n✅ Training complete!")
+    typer.echo(f"🏆 Best model: {result['best_model_name']}")
+    typer.echo(f"🚀 Deployed: {result['deployed_model']}")
+    typer.echo(f"📊 Metrics: {result['all_metrics']}")
+    typer.echo(f"💾 Artifact: {result['artifact_path']}")
+
 
 @app.command()
 def tail(
@@ -65,7 +95,8 @@ def tail(
     df = _load_csv(Path(path), sep=sep, encoding=encoding)
     typer.echo(df.tail(n).to_string(index=False))
 
-@app.command()  
+
+@app.command()
 def overview(
     path: str = typer.Argument(..., help="Путь к CSV-файлу."),
     sep: str = typer.Option(",", help="Разделитель в CSV."),
@@ -95,12 +126,24 @@ def report(
     out_dir: str = typer.Option("reports", help="Каталог для отчёта."),
     sep: str = typer.Option(",", help="Разделитель в CSV."),
     encoding: str = typer.Option("utf-8", help="Кодировка файла."),
-    max_hist_columns: int = typer.Option(5, help="Максимум числовых колонок для гистограмм."),
-    min_missing_share: float = typer.Option(0.5, help="Минимальная доля пропущенных значений."),
-    min_duplicates_share: float = typer.Option(0.2, help="Минимальная доля дубликатов."),
-    min_zeros_share: float = typer.Option(0.9, help="Минимальная доля нулевых значений."),
-    max_columns: int = typer.Option(5, help="Максимум категориальных колонок для top-категорий."),
-    top_k_categories: int = typer.Option(5, help="Количество top-значений для категориальных признаков.")
+    max_hist_columns: int = typer.Option(
+        5, help="Максимум числовых колонок для гистограмм."
+    ),
+    min_missing_share: float = typer.Option(
+        0.5, help="Минимальная доля пропущенных значений."
+    ),
+    min_duplicates_share: float = typer.Option(
+        0.2, help="Минимальная доля дубликатов."
+    ),
+    min_zeros_share: float = typer.Option(
+        0.9, help="Минимальная доля нулевых значений."
+    ),
+    max_columns: int = typer.Option(
+        5, help="Максимум категориальных колонок для top-категорий."
+    ),
+    top_k_categories: int = typer.Option(
+        5, help="Количество top-значений для категориальных признаков."
+    ),
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -118,13 +161,20 @@ def report(
     # 1. Обзор
     summary = summarize_dataset(df)
     summary_df = flatten_summary_for_print(summary)
-    missing_df = value_table(df,np.nan)
-    zeros_df = value_table(df,0)
+    missing_df = value_table(df, np.nan)
+    zeros_df = value_table(df, 0)
     corr_df = correlation_matrix(df)
-    top_cats = top_categories(df,max_columns,top_k_categories)
+    top_cats = top_categories(df, max_columns, top_k_categories)
 
     # 2. Качество в целом
-    quality_flags = compute_quality_flags(summary, missing_df, zeros_df, min_missing_share, min_duplicates_share, min_zeros_share)
+    quality_flags = compute_quality_flags(
+        summary,
+        missing_df,
+        zeros_df,
+        min_missing_share,
+        min_duplicates_share,
+        min_zeros_share,
+    )
 
     # 3. Сохраняем табличные артефакты
     summary_df.to_csv(out_root / "summary.csv", index=False)
@@ -149,17 +199,35 @@ def report(
         f.write(f"- Оценка качества: **{quality_flags['quality_score']:.2f}**\n\n")
         f.write(f"- Слишком мало строк: **{quality_flags['too_few_rows']}**\n\n")
         f.write(f"- Слишком много колонок: **{quality_flags['too_many_columns']}**\n\n")
-        f.write(f"- Макс. доля пропусков по колонке: **{quality_flags['max_missing_share']:.2%}**\n\n")
-        f.write(f"- Доля дубликатов по строкам: **{quality_flags['duplicates_share']:.2%}**\n\n")
-        f.write(f"- Макс. доля нулевых значений по колонке: **{quality_flags['max_zeros_share']:.2%}**\n\n")
-        f.write(f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n")
-        f.write(f"- Слишком много дубликатов: **{quality_flags['too_many_duplicates']}**\n\n")
-        f.write(f"- Слишком много нулевых значений: **{quality_flags['too_many_zeros']}**\n\n")
+        f.write(
+            f"- Макс. доля пропусков по колонке: **{quality_flags['max_missing_share']:.2%}**\n\n"
+        )
+        f.write(
+            f"- Доля дубликатов по строкам: **{quality_flags['duplicates_share']:.2%}**\n\n"
+        )
+        f.write(
+            f"- Макс. доля нулевых значений по колонке: **{quality_flags['max_zeros_share']:.2%}**\n\n"
+        )
+        f.write(
+            f"- Слишком много пропусков: **{quality_flags['too_many_missing']}**\n\n"
+        )
+        f.write(
+            f"- Слишком много дубликатов: **{quality_flags['too_many_duplicates']}**\n\n"
+        )
+        f.write(
+            f"- Слишком много нулевых значений: **{quality_flags['too_many_zeros']}**\n\n"
+        )
 
         f.write("## Заданные пороги для долей недопустимых данных\n\n")
-        f.write(f"- Заданный порог для пропусков по колонке: **{min_missing_share:.2%}**\n\n")
-        f.write(f"- Заданный порог для дубликатов по строкам: **{min_duplicates_share:.2%}**\n\n")
-        f.write(f"- Заданный порог для нулевых значений по колонке: **{min_zeros_share:.2%}**\n\n")
+        f.write(
+            f"- Заданный порог для пропусков по колонке: **{min_missing_share:.2%}**\n\n"
+        )
+        f.write(
+            f"- Заданный порог для дубликатов по строкам: **{min_duplicates_share:.2%}**\n\n"
+        )
+        f.write(
+            f"- Заданный порог для нулевых значений по колонке: **{min_zeros_share:.2%}**\n\n"
+        )
 
         f.write("## Колонки\n\n")
         f.write("См. файл `summary.csv`.\n\n")
@@ -174,14 +242,16 @@ def report(
         if summary.duplicates == 0:
             f.write("Дубликатов нет или датасет пуст.\n\n")
         else:
-            f.write(f"Количество дубликатов по строкам: {summary.duplicates}.\n\nСм. файл `duplicates.csv`.\n\n")    
-        
+            f.write(
+                f"Количество дубликатов по строкам: {summary.duplicates}.\n\nСм. файл `duplicates.csv`.\n\n"
+            )
+
         f.write("## Нулевые значения\n\n")
         if zeros_df.empty:
             f.write("Нулевых значений нет или датасет пуст.\n\n")
         else:
             f.write("См. файлы `zeros.csv` и `zeros_matrix.png`.\n\n")
-        
+
         f.write("## Корреляция числовых признаков\n\n")
         if corr_df.empty:
             f.write("Недостаточно числовых колонок для корреляции.\n\n")
@@ -205,8 +275,12 @@ def report(
 
     typer.echo(f"Отчёт сгенерирован в каталоге: {out_root}")
     typer.echo(f"- Основной markdown: {md_path}")
-    typer.echo("- Табличные файлы: summary.csv, missing.csv, duplicates.csv, zeros.csv, correlation.csv, top_categories/*.csv")
-    typer.echo("- Графики: hist_*.png, missing_matrix.png, zeros_matrix.png correlation_heatmap.png")
+    typer.echo(
+        "- Табличные файлы: summary.csv, missing.csv, duplicates.csv, zeros.csv, correlation.csv, top_categories/*.csv"
+    )
+    typer.echo(
+        "- Графики: hist_*.png, missing_matrix.png, zeros_matrix.png correlation_heatmap.png"
+    )
 
 
 if __name__ == "__main__":
