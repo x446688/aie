@@ -112,10 +112,9 @@ def fit_model(model, train_loader, val_loader, device, epochs=50, lr=5e-4, patie
             epochs_no_improve += 1
 
         # Logging
-        if epoch % 5 == 0 or epoch == 1:
-            print(
-                f"Epoch {epoch:3d}/{epochs} | Train: {train_loss:.4f} | Val: {val_loss:.4f} | Patience: {epochs_no_improve}/{patience}"
-            )
+        print(
+            f"Epoch {epoch:3d}/{epochs} | Train: {train_loss:.4f} | Val: {val_loss:.4f} | Patience: {epochs_no_improve}/{patience}"
+        )
 
         # Early stopping
         if epochs_no_improve >= patience:

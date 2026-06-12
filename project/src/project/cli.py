@@ -25,7 +25,7 @@ from .viz import (
     save_top_categories_tables,
 )
 
-app = typer.Typer(help="Утилита для предсказания спроса на товар по времени.")
+app = typer.Typer(help="Утилита для предсказания спроса на электроэнергию.")
 
 
 def _load_csv(
@@ -75,11 +75,11 @@ def train_models(
     df = _load_csv(Path(path), sep=sep, encoding=encoding)
     result = train(df, window_size=window_size, dataset_name=dataset_name)
 
-    typer.echo(f"\n✅ Training complete!")
-    typer.echo(f"🏆 Best model: {result['best_model_name']}")
-    typer.echo(f"🚀 Deployed: {result['deployed_model']}")
-    typer.echo(f"📊 Metrics: {result['all_metrics']}")
-    typer.echo(f"💾 Artifact: {result['artifact_path']}")
+    typer.echo(f"\nОбучение завершено:")
+    typer.echo(f"Best model: {result['best_model_name']}")
+    typer.echo(f"Deployed: {result['deployed_model']}")
+    typer.echo(f"Metrics: {result['all_metrics']}")
+    typer.echo(f"Artifact: {result['artifact_path']}")
 
 
 @app.command()

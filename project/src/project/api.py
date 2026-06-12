@@ -85,7 +85,7 @@ def ui() -> HTMLResponse:
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Прогноз значения продукта</title>
+  <title>Прогноз спроса электроэнергии (следующий час)</title>
   <style>
     body { font-family: system-ui, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
     h1 { color: #1a365d; }
@@ -97,7 +97,7 @@ def ui() -> HTMLResponse:
   </style>
 </head>
 <body>
-  <h1>Прогноз значения продукта</h1>
+  <h1>Прогноз значения спроса электроэнергии (следующий час)</h1>
   <p>Загрузите CSV с колонками <strong>дата</strong> и <strong>значение</strong>.</p>
   <form method="post" action="/predict" enctype="multipart/form-data">
     <label>CSV-файл:<br><input type="file" name="file" accept=".csv" required></label><br>
