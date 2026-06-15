@@ -23,7 +23,7 @@ logging.basicConfig(
         logging.FileHandler("logs/api.log", encoding="utf-8"),
     ],
 )
-logger = logging.getLogger("product_forecast_api")
+logger = logging.getLogger("electricity_demand_forecast_api")
 
 config = load_config()
 model_cfg = config.get("model", {})
@@ -31,7 +31,7 @@ paths_cfg = config.get("paths", {})
 service_cfg = config.get("service", {})
 
 app = FastAPI(
-    title=config.get("project", {}).get("name", "Product Value Forecaster"),
+    title=config.get("project", {}).get("name", "Electricity demand value forecaster"),
     version="0.3.0",
     description=config.get("project", {}).get(
         "description", "Time-series forecasting API"
