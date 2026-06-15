@@ -1,13 +1,12 @@
 # configs/default.yaml
 project:
-  name: product-value-forecast
+  name: demand-value-forecast
   random_state: 42
-  description: "LSTM/GRU time-series forecasting for product value"
+  description: "LSTM/GRU time-series forecasting for demand value"
 
 data:
   # Default dataset for training (override via CLI)
   default_path: "data/example.csv"
-  # Column detection: auto or explicit mapping
   auto_detect_columns: true
   # If auto_detect fails, use these fallbacks
   column_mapping:
@@ -37,7 +36,7 @@ model:
     batch_size: 64
     patience: 10
     
-  # GRU config (same structure for fair comparison)
+  # GRU config
   gru:
     hidden_size: 64
     num_layers: 2
@@ -52,12 +51,11 @@ model:
     alpha: 1.0
     max_iter: 1000
     
-  # Naive baseline: last-value forecast (no params)
 
 training:
   # Save all models or only best?
   save_all: false
-  # Metric to select best model: "MAE", "RMSE", or "MAPE" (lower is better)
+  # Metric to select best model: "MAE", "RMSE", or "MAPE"
   best_metric: "RMSE"
   # Seed for reproducibility
   seed: 42
